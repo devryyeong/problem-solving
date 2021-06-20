@@ -1,0 +1,37 @@
+#include <iostream>
+#include <algorithm>
+#include <vector> //TC1:11(10)
+using namespace std; //TC2:91(84)
+int main(){
+	freopen("input.txt","rt",stdin);
+	int n, pos, arr[50][50], lp, rp, count=0;
+	int left, right, up, down; 
+	scanf("%d", &n); //n=5
+	
+	for(int i=1; i<=n; i++){
+		for(int j=1; j<=n; j++){
+			scanf("%d", &arr[i][j]);
+		}
+	}
+	
+	for(lp=1; lp<=n; lp++){
+		for(rp=1; rp<=n; rp++){
+			pos=arr[lp][rp]; //pos 픽스
+			up=arr[lp-1][rp];
+			down=arr[lp+1][rp];
+			left=arr[lp][rp-1];
+			right=arr[lp][rp+1];
+			
+			
+			//printf("pos: %d/상: %d/하: %d/좌: %d/우: %d",pos,up,down,left,right);
+			if(pos>up && pos>down && pos>left && pos>right){
+				count++;
+			}
+			
+		}
+	}
+	printf("%d", count);
+	//printf("pos: %d/상: %d/하: %d/좌: %d/우: %d",pos,up,down,left,right);
+	
+	return 0;
+}
