@@ -1,6 +1,6 @@
 # problem-solving
-## :open_file_folder: Directory
-💻 Algorithm problem solving &amp; Coding test
+## :📝: Directory
+💻 For Coding test
 
 ## :open_file_folder: Directory
  - #### :pushpin: BOJ
