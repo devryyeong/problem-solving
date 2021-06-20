@@ -1,6 +1,6 @@
 # problem-solving
-## :📝: Directory
-💻 For Coding test
+## 💻 For Coding test
+매일, 꾸준히
 
 ## :open_file_folder: Directory
  - #### :pushpin: BOJ
