@@ -29,13 +29,13 @@ int main(){
 			}
 		}	
 	}
-	//°úÁ¤ÀÌ ¸ðµÎ ³¡³ªµµ ½ºÅÃÀÌ ºñ¾îÀÖÁö ¾ÊÀ¸¸é ¹øÈ£¼ø ºÒ°¡´É 
+	//ê³¼ì •ì´ ëª¨ë‘ ëë‚˜ë„ ìŠ¤íƒì´ ë¹„ì–´ìžˆì§€ ì•Šìœ¼ë©´ ë²ˆí˜¸ìˆœ ë¶ˆê°€ëŠ¥ 
 	if(!s.empty()){
 		printf("impossible");
 		return 0;
 	}
 	
-	//°á°ú Ãâ·Â 
+	//ê²°ê³¼ ì¶œë ¥ 
 	for(int i=0; i<res.size(); i++){
 		printf("%c ", res[i]);
 	}
