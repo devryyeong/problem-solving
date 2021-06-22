@@ -20,7 +20,7 @@ void DFS(int L){ //전위순회로!
 }
 
 int main(){
-	//freopen("input.txt","rt",stdin);
+	freopen("input.txt","rt",stdin);
 	scanf("%d", &n);
 	DFS(1);
 	
