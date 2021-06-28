@@ -4,7 +4,7 @@
 
 ## :open_file_folder: Directory
  - #### :pushpin: BOJ
-   - [백준 온라인 저지](https://github.com/devryyeong/problem-solving/tree/main/BOJ)
+   - [Baekjoon Online judge](https://github.com/devryyeong/problem-solving/tree/main/BOJ)
  - #### :pushpin: CodeUp	
    - [기초 100제](https://github.com/devryyeong/problem-solving/tree/main/CodeUp)
  - #### :pushpin: CPS
