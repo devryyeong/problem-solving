@@ -6,6 +6,6 @@
  - #### :pushpin: BOJ
    - [백준 온라인 저지]
  - #### :pushpin: CodeUp	
-   - [기초 100제]
+   - [기초 100제](https://github.com/devryyeong/problem-solving/tree/main/CodeUp)
  - #### :pushpin: CPS
    - [Creative Problem Solving](https://github.com/devryyeong/problem-solving/tree/main/CPS)
