@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 int n, m, cnt=0, a[11], path[11];
-bool flag=false;
+
 void DFS(int L, int sum){
 	if(L==n+1){ //더이상 재귀호출 하지 않아도 되는 조건 
 		if(sum==m){
