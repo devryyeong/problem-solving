@@ -1,29 +1,39 @@
-//61] Æ¯Á¤ ¼ö ¸¸µé±â(DFS: Microsoft ÀÎÅÍºä) 
+//61] íŠ¹ì • ìˆ˜ ë§Œë“¤ê¸°(DFS: Microsoft ì¸í„°ë·°) 
 #include <iostream>
 #include <algorithm>
 #include <vector>
 using namespace std;
-int n, m, cnt=0, a[11];
+int n, m, cnt=0, a[11], path[11];
 bool flag=false;
 void DFS(int L, int sum){
-	if(L==n+1){ //´õÀÌ»ó Àç±ÍÈ£Ãâ ÇÏÁö ¾Ê¾Æµµ µÇ´Â Á¶°Ç 
+	if(L==n+1){ //ë”ì´ìƒ ì¬ê·€í˜¸ì¶œ í•˜ì§€ ì•Šì•„ë„ ë˜ëŠ” ì¡°ê±´ 
 		if(sum==m){
 			cnt++;
+			for(int i=1; i<L; i++){
+				printf("%d ", path[i]);
+			}
+			puts("");
 		}
-	}else { //¼¼°¡Áö·Î °¡ÁöÄ¡±â 
-		DFS(L+1, sum+a[L]); //°¡Áö1: Æ÷ÇÔ½ÃÅ°¸é¼­ + 
-		DFS(L+1, sum-a[L]); //°¡Áö2: Æ÷ÇÔ½ÃÅ°¸é¼­ - 
-		DFS(L+1, sum); //°¡Áö3: Æ÷ÇÔ½ÃÅ°Áö ¾ÊÀ½ 
+	}else { //ì„¸ê°€ì§€ë¡œ ê°€ì§€ì¹˜ê¸°
+		path[L]=a[L]; //ê²½ë¡œ ì €ì¥ 
+		DFS(L+1, sum+a[L]); //ê°€ì§€1: í¬í•¨ì‹œí‚¤ë©´ì„œ + 
+		path[L]=-a[L];
+		DFS(L+1, sum-a[L]); //ê°€ì§€2: í¬í•¨ì‹œí‚¤ë©´ì„œ - 
+		path[L]=0;
+		DFS(L+1, sum); //ê°€ì§€3: í¬í•¨ì‹œí‚¤ì§€ ì•ŠìŒ 
 	}
 }
 
 int main(){
-	//freopen("input.txt","rt",stdin);
+	freopen("input.txt","rt",stdin);
 	scanf("%d %d", &n, &m);
 	for(int i=1; i<=n; i++){
 		scanf("%d", &a[i]);
 	}
-	DFS(1, 0); //(·¹º§, ¿ø¼ÒÀÇ ÇÕ)
+	DFS(1, 0); //(ë ˆë²¨, ì›ì†Œì˜ í•©)
+	if(cnt==0){
+		printf("-1");
+	}
 	printf("%d", cnt);
 	return 0;
 }
