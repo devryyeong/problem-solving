@@ -1,24 +1,24 @@
-//65] ¹Ì·Î Å½»ö(DFS)
+//65] ë¯¸ë¡œ íƒìƒ‰(DFS)
 #include <iostream>
 #include <algorithm>
 using namespace std;
 int cnt=0;
-int map[10][10], ch[10][10]; //ch:¹æ¹®Çß´ÂÁö check
-int dx[4]={-1,0,1,0}; //12½Ã-3½Ã-6½Ã-9½Ã ¹æÇâ ¼øÀ¸·Î Å½»ö 
+int map[10][10], ch[10][10]; //ch:ë°©ë¬¸í–ˆëŠ”ì§€ check
+int dx[4]={-1,0,1,0}; //12ì‹œ-3ì‹œ-6ì‹œ-9ì‹œ ë°©í–¥ ìˆœìœ¼ë¡œ íƒìƒ‰ 
 int dy[4]={0,1,0,-1};
 
 void DFS(int x, int y){ 
-	int xx, yy; //¾ÕÀ¸·Î ÀÌµ¿ÇÒ ÁÂÇ¥ 
+	int xx, yy; //ì•ìœ¼ë¡œ ì´ë™í•  ì¢Œí‘œ 
 	if(x==7 && y==7){
 		cnt++;
-	}else{ //°¥ ¼ö ÀÖ´ÂÁö ¾ø´ÂÁö
+	}else{ //ê°ˆ ìˆ˜ ìˆëŠ”ì§€ ì—†ëŠ”ì§€
 		for(int i=0; i<4; i++){
 			xx=x+dx[i];
 			yy=y+dy[i];
-			if(xx<1 || xx>7 || yy<1 || yy>7){ //°İÀÚÆÇÀÇ ³¡ 
+			if(xx<1 || xx>7 || yy<1 || yy>7){ //ê²©ìíŒì˜ ë 
 				continue;
 			}
-			if(map[xx][yy]==0 && ch[xx][yy]==0){ //±æÀÌ ÀÖ°í, ¹æ¹®ÇÑÀû ¾ø´Ù¸é 
+			if(map[xx][yy]==0 && ch[xx][yy]==0){ //ê¸¸ì´ ìˆê³ , ë°©ë¬¸í•œì  ì—†ë‹¤ë©´ 
 				ch[xx][yy]=1;
 				DFS(xx, yy);
 				ch[xx][yy]=0;
