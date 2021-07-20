@@ -1,7 +1,6 @@
 #include <iostream>
 
 int main() {
-	freopen("input.txt","rt", stdin);
     int n, m, sum=0;
     scanf("%d %d", &n, &m); 
     //vector<int> bus(n);
