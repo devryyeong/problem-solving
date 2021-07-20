@@ -1,4 +1,4 @@
-//#50] ¿µÁö(territory) ¼±ÅÃ (small)
+//#50] ì˜ì§€(territory) ì„ íƒ : (small)
 #include <iostream>
 #include <algorithm>
 #include <vector>
