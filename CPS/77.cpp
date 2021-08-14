@@ -1,21 +1,21 @@
-//77] Ä£±¸ÀÎ°¡? (Disjoint-set: Union&Find Algorithm) 
+//77] ì¹œêµ¬ì¸ê°€? (Disjoint-set: Union&Find Algorithm) 
 #include <iostream>
 #include <algorithm>
 #include <vector>
 #include <queue>
 using namespace std;
 
-//1Â÷¿ø¹è¿­·Î Æ®¸® ±¸Çö
-//(ÀÎµ¦½º=ÇĞ»ı¹øÈ£, °ª=ÁıÇÕÀÇ ¹øÈ£ )
+//1ì°¨ì›ë°°ì—´ë¡œ íŠ¸ë¦¬ êµ¬í˜„
+//(ì¸ë±ìŠ¤=í•™ìƒë²ˆí˜¸, ê°’=ì§‘í•©ì˜ ë²ˆí˜¸ )
 int unf[1001]; 
 
-//³Ñ¾î¿Â ÇĞ»ıÀÇ ÁıÇÕ ¹øÈ£ ¸®ÅÏ 
+//ë„˜ì–´ì˜¨ í•™ìƒì˜ ì§‘í•© ë²ˆí˜¸ ë¦¬í„´ 
 int Find(int v){
 	if(v==unf[v]) return v;
-	else return unf[v]=Find(unf[v]); //Æ®¸® °æ·Î¸¦ ¾ĞÃàÇÏ±â À§ÇØ FindÀÇ ¸®ÅÏ°ªÀ» ´Ù½Ã unf¿¡ ÀúÀå. (¸Ş¸ğÀÌÁ¦ÀÌ¼Ç) 
+	else return unf[v]=Find(unf[v]); //íŠ¸ë¦¬ ê²½ë¡œë¥¼ ì••ì¶•í•˜ê¸° ìœ„í•´ Findì˜ ë¦¬í„´ê°’ì„ ë‹¤ì‹œ unfì— ì €ì¥. (ë©”ëª¨ì´ì œì´ì…˜) 
 }
 
-//FindÇÔ¼ö¸¦ È£ÃâÇØ¼­ unfÀÇ ÀÎµ¦½º¿Í °ªÀÌ °°ÀºÁö È®ÀÎ. 
+//Findí•¨ìˆ˜ë¥¼ í˜¸ì¶œí•´ì„œ unfì˜ ì¸ë±ìŠ¤ì™€ ê°’ì´ ê°™ì€ì§€ í™•ì¸. 
 int Union(int a, int b){ 
 	a=Find(a);
 	b=Find(b);
@@ -28,14 +28,15 @@ int main() {
 	int n, m, a, b;
 	cin>>n>>m; //9,7
 
+	//ê°ì í•œëª…ìœ¼ë¡œ ì´ë£¨ì–´ì§„ ê°ê°ì˜ ì§‘í•©ìœ¼ë¡œ ì´ˆê¸°í™” 
 	for(int i=1; i<=n; i++){  
 		unf[i]=i;
 	}
 	for(int j=1; j<=m; j++){
 		cin>>a>>b;
-		Union(a,b); //ÀÔ·Â¹Ş¾Æ¼­ ¹Ù·Î UnionÇÔ¼ö È£Ãâ 
+		Union(a,b); //ì…ë ¥ë°›ì•„ì„œ ë°”ë¡œ Unioní•¨ìˆ˜ í˜¸ì¶œ 
 	}
-	cin>>a>>b; //Ä£±¸ÀÎÁö È®ÀÎÇÏ´Â ¼ıÀÚ½Ö 
+	cin>>a>>b; //ì¹œêµ¬ì¸ì§€ í™•ì¸í•˜ëŠ” ìˆ«ììŒ 
 	
 	a=Find(a);
 	b=Find(b);
