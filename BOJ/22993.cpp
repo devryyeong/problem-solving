@@ -1,4 +1,4 @@
-//22993] ╪╜╣Г╬Нец 3 
+//22993] Л└°К⌠═Л√╢М┐² 3 
 #include <iostream>
 #include <algorithm>
 #include <vector>
