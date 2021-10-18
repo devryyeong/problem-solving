@@ -1,4 +1,4 @@
-//2490] ŸU³îÀÌ 
+//2490] ìœ·ë†€ì´
 #include <iostream>
 #include <vector>
 using namespace std;
